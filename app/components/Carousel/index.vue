@@ -96,7 +96,7 @@ const projects: Project[] = [
 
   &.i00 {
     background-image: url("/img/carousel/carousel-01.jpg");
-    background-position: center;
+    background-position: 50% 50%;
   }
   &.i01 {
     background-image: url("/img/carousel/carousel-02.jpg");
