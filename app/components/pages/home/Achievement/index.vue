@@ -1,10 +1,10 @@
 <template>
-  <section class="achievement-section">
+  <Container class="achievement-section">
     <div class="achievement-layout">
       <!-- 左側：履歷標題與專業說明 -->
       <div class="profile-column">
         <div class="badge-kpi">
-          <span class="pulsing-dot"/>
+          <span class="pulsing-dot" />
           Key Performance Indicators
         </div>
 
@@ -53,7 +53,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </Container>
 </template>
 
 <script setup lang="ts">
@@ -99,11 +99,6 @@ const destroy: DestroyItem[] = [
 
 <style scoped>
 .achievement-section {
-  padding: 80px 24px;
-  max-width: 1200px;
-  margin: 0 auto;
-  box-sizing: border-box;
-
   .achievement-layout {
     display: grid;
     grid-template-columns: 1fr;
@@ -218,7 +213,8 @@ const destroy: DestroyItem[] = [
         }
 
         .metrics-summary {
-          font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+          font-family:
+            ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
           font-size: 12px;
           color: var(--ui-text-dimmed);
         }
