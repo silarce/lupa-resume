@@ -95,15 +95,15 @@ const projects: Project[] = [
   transition: 0.3s;
 
   &.i00 {
-    background-image: url("/img/carousel/carousel-01.jpg");
+    background-image: url("/img/carousel/carousel-01.webp");
     background-position: 50% 50%;
   }
   &.i01 {
-    background-image: url("/img/carousel/carousel-02.jpg");
+    background-image: url("/img/carousel/carousel-02.webp");
     background-position: 50% 20%;
   }
   &.i02 {
-    background-image: url("/img/carousel/carousel-03.jpg");
+    background-image: url("/img/carousel/carousel-03.webp");
     background-position: 50% 40%;
   }
 }
