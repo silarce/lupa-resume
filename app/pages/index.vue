@@ -1,8 +1,8 @@
 <template>
   <div>
     <PagesHomeCarousel />
-
     <PagesHomeAchievement />
+    <PagesHomeStronghold />
   </div>
 </template>
 
