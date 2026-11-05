@@ -3,6 +3,7 @@
     <PagesHomeCarousel />
     <PagesHomeAchievement />
     <PagesHomeStronghold />
+    <PagesHomeAboutLupa />
   </div>
 </template>
 
