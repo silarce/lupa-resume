@@ -2,7 +2,7 @@
   <div>
     <Carousel />
 
-    <Achievement />
+    <PagesHomeAchievement />
   </div>
 </template>
 
