@@ -1,8 +1,9 @@
 <template>
   <div>
-    test homepage
-
-    <UAlert title="Heads up!" />
+    <!--  -->
+    <div class="">
+      <Carousel />
+    </div>
   </div>
 </template>
 
