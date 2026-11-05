@@ -4,6 +4,7 @@
     <PagesHomeAchievement />
     <PagesHomeStronghold />
     <PagesHomeAboutLupa />
+    <PagesHomeDemolitionRecord />
   </div>
 </template>
 
