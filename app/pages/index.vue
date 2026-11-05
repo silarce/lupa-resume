@@ -1,12 +1,15 @@
 <template>
   <div>
-    <!--  -->
-    <div class="">
-      <Carousel />
-    </div>
+    <Carousel />
+
+    <Achievement />
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+//
+</script>
 
-<style scoped></style>
+<style scoped>
+/*  */
+</style>
