@@ -5,6 +5,7 @@
     <PagesHomeStronghold />
     <PagesHomeAboutLupa />
     <PagesHomeDemolitionRecord />
+    <PagesHomeTimeline />
   </div>
 </template>
 
