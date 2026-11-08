@@ -7,6 +7,7 @@
     <PagesHomeDemolitionRecord />
     <PagesHomeTimeline />
     <PagesHomeExperience />
+    <PagesHomeContact />
   </div>
 </template>
 
