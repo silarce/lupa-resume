@@ -1,8 +1,15 @@
 <template>
   <div
     class="w-full px-16 h-125 flex items-center mycontainer"
-    :class="`i0${activeIndex}`"
   >
+    <Transition name="background-fade">
+      <div
+        :key="activeIndex"
+        class="carousel-background"
+        :class="`background-${activeIndex}`"
+        aria-hidden="true"
+      />
+    </Transition>
     <UCarousel
       ref="carouselRef"
       v-slot="{ item }"
@@ -11,7 +18,7 @@
       :ui="{ item: 'basis-full' }"
       arrows
       dots
-      class="w-150"
+      class="relative z-10 w-150"
       loop
       :prev="{ class: 'cursor-pointer' }"
       :next="{ class: 'cursor-pointer' }"
@@ -91,20 +98,39 @@ const projects: Project[] = [
 
 <style scoped>
 .mycontainer {
-  background-size: cover;
-  transition: 0.3s;
+  position: relative;
+  isolation: isolate;
+}
 
-  &.i00 {
-    background-image: url("/img/carousel/carousel-01.webp");
-    background-position: 50% 50%;
-  }
-  &.i01 {
-    background-image: url("/img/carousel/carousel-02.webp");
-    background-position: 50% 20%;
-  }
-  &.i02 {
-    background-image: url("/img/carousel/carousel-03.webp");
-    background-position: 50% 40%;
-  }
+.carousel-background {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background-size: cover;
+}
+
+.background-fade-enter-active,
+.background-fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.background-fade-enter-from,
+.background-fade-leave-to {
+  opacity: 0;
+}
+
+.background-0 {
+  background-image: url("/img/carousel/carousel-01.webp");
+  background-position: 50% 50%;
+}
+
+.background-1 {
+  background-image: url("/img/carousel/carousel-02.webp");
+  background-position: 50% 20%;
+}
+
+.background-2 {
+  background-image: url("/img/carousel/carousel-03.webp");
+  background-position: 50% 40%;
 }
 </style>
