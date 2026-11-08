@@ -80,9 +80,6 @@ const Stronghold: StrongholdItem[] = [
 <style scoped>
 .stronghold-section {
   width: 100%;
-  background-color: var(--ui-bg-elevated);
-  border-top: 1px solid var(--ui-border);
-  border-bottom: 1px solid var(--ui-border);
 
   .section-header {
     display: flex;
