@@ -22,6 +22,8 @@
 <script setup lang="ts">
 import type { ChangelogVersionProps } from "@nuxt/ui";
 
+const baseURL = useRuntimeConfig().app.baseURL;
+
 const versions: ChangelogVersionProps[] = [
   {
     title: "出生",
@@ -32,7 +34,7 @@ const versions: ChangelogVersionProps[] = [
     title: "帶回家",
     description: "",
     date: "2025-10",
-    image: "/img/timeline/20251021.webp",
+    image: `${baseURL}img/timeline/20251021.webp`,
     ui: {
       image: "object-[50%_40%]",
     },
@@ -41,7 +43,7 @@ const versions: ChangelogVersionProps[] = [
     title: "三個月大",
     description: "最可愛的時候",
     date: "2025-11",
-    image: "/img/timeline/20251107.webp",
+    image: `${baseURL}img/timeline/20251107.webp`,
     ui: {
       image: "object-[50%_15%]",
     },
@@ -50,7 +52,7 @@ const versions: ChangelogVersionProps[] = [
     title: "長出假眉毛",
     description: "也像黑眼圈",
     date: "2025-12",
-    image: "/img/timeline/20251215.webp",
+    image: `${baseURL}img/timeline/20251215.webp`,
     ui: {
       image: "object-[50%_30%]",
     },
@@ -59,7 +61,7 @@ const versions: ChangelogVersionProps[] = [
     title: "現在",
     description: "喜歡咬球",
     date: "2026-10",
-    image: "/img/timeline/202610.webp",
+    image: `${baseURL}img/timeline/202610.webp`,
     ui: {
       image: "object-[50%_10%]",
     },

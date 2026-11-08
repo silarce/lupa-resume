@@ -47,7 +47,9 @@
               </div>
 
               <div class="items-section">
-                <span class="items-title">受災標的清單 ({{ items.length }})</span>
+                <span class="items-title"
+                  >受災標的清單 ({{ items.length }})</span
+                >
                 <ul class="items-list">
                   <li v-for="(item, i) in items" :key="i" class="item-row">
                     <span class="item-bullet" />
@@ -65,7 +67,11 @@
               <div class="modal-meta">
                 <span class="modal-meta-label">受災標的清單：</span>
                 <ul class="modal-list">
-                  <li v-for="(item, i) in items" :key="i" class="modal-list-item">
+                  <li
+                    v-for="(item, i) in items"
+                    :key="i"
+                    class="modal-list-item"
+                  >
                     {{ item }}
                   </li>
                 </ul>
@@ -79,6 +85,8 @@
 </template>
 
 <script setup lang="ts">
+const baseURL = useRuntimeConfig().app.baseURL;
+
 type DemolitionRecord = {
   date: string;
   items: string[];
@@ -94,22 +102,22 @@ const demolitionRecords: DemolitionRecord[] = [
   {
     date: "20260209",
     items: ["兩包奇亞籽", "涼拖鞋", "衛生紙", "襪子"],
-    img: "/img/demolitionRecord/20260209.webp",
+    img: `${baseURL}img/demolitionRecord/20260209.webp`,
   },
   {
     date: "20260427",
     items: ["公仔", "發泡地墊", "布鞋"],
-    img: "/img/demolitionRecord/20260427.webp",
+    img: `${baseURL}img/demolitionRecord/20260427.webp`,
   },
   {
     date: "20260505",
     items: ["清潔海綿", "衛生紙", "涼拖鞋", "棉繩"],
-    img: "/img/demolitionRecord/20260505.webp",
+    img: `${baseURL}img/demolitionRecord/20260505.webp`,
   },
   {
     date: "20260513",
     items: ["未開封的監視器", "書", "筆記本", "包包", "布鞋", "襪子"],
-    img: "/img/demolitionRecord/20260513.webp",
+    img: `${baseURL}img/demolitionRecord/20260513.webp`,
   },
 ];
 </script>
@@ -164,7 +172,8 @@ const demolitionRecords: DemolitionRecord[] = [
         }
 
         .sub-title {
-          font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+          font-family:
+            ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
           font-size: 16px;
           font-weight: 500;
           color: var(--ui-text-muted);
@@ -194,7 +203,9 @@ const demolitionRecords: DemolitionRecord[] = [
 
       .record-card {
         cursor: pointer;
-        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
 
         &:hover {
           transform: translateY(-4px);
@@ -262,7 +273,8 @@ const demolitionRecords: DemolitionRecord[] = [
             left: 10px;
             padding: 3px 8px;
             border-radius: 6px;
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-family:
+              ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 0.05em;
@@ -292,7 +304,8 @@ const demolitionRecords: DemolitionRecord[] = [
             }
 
             .date-value {
-              font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+              font-family:
+                ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
               font-size: 13px;
               font-weight: 700;
               color: var(--ui-text-highlighted);
