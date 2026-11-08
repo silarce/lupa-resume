@@ -1,12 +1,12 @@
 <template>
   <div class="home-page">
     <PagesHomeCarousel />
-    <PagesHomeAchievement />
-    <PagesHomeStronghold />
     <PagesHomeAboutLupa />
-    <PagesHomeDemolitionRecord />
-    <PagesHomeTimeline />
     <PagesHomeExperience />
+    <PagesHomeAchievement />
+    <PagesHomeDemolitionRecord />
+    <PagesHomeStronghold />
+    <PagesHomeTimeline />
     <PagesHomeContact />
   </div>
 </template>
