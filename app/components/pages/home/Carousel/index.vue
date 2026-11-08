@@ -1,15 +1,13 @@
 <template>
-  <div
-    class="w-full px-16 h-125 flex items-center mycontainer"
-  >
-    <Transition name="background-fade">
-      <div
-        :key="activeIndex"
-        class="carousel-background"
-        :class="`background-${activeIndex}`"
-        aria-hidden="true"
-      />
-    </Transition>
+  <div class="w-full px-16 h-125 flex items-center mycontainer">
+    <div
+      v-for="(_, index) in projects"
+      :key="index"
+      class="carousel-background"
+      :class="[`background-${index}`, { 'is-active': activeIndex === index }]"
+      aria-hidden="true"
+    />
+
     <UCarousel
       ref="carouselRef"
       v-slot="{ item }"
@@ -107,6 +105,12 @@ const projects: Project[] = [
   z-index: 0;
   inset: 0;
   background-size: cover;
+  opacity: 0; /* 預設透明（但圖片會在背景先載入好） */
+  transition: opacity 0.3s ease;
+}
+
+.carousel-background.is-active {
+  opacity: 1; /* 當前這張顯示出來 */
 }
 
 .background-fade-enter-active,
