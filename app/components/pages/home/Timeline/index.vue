@@ -26,24 +26,42 @@ const versions: ChangelogVersionProps[] = [
   {
     title: "出生",
     description: "可愛的小狗出生了",
-    date: "2025-09-15",
+    date: "2025-09",
   },
   {
     title: "帶回家",
     description: "",
-    date: "2025-10-21",
+    date: "2025-10",
     image: "/img/timeline/20251021.webp",
     ui: {
       image: "object-[50%_40%]",
     },
   },
   {
-    title: "看醫生",
-    description: "第一次看醫生",
-    date: "2025-10-25",
-    image: "/img/timeline/20251027.webp",
+    title: "三個月大",
+    description: "最可愛的時候",
+    date: "2025-11",
+    image: "/img/timeline/20251107.webp",
     ui: {
-      image: "object-[50%_40%]",
+      image: "object-[50%_15%]",
+    },
+  },
+  {
+    title: "長出假眉毛",
+    description: "也像黑眼圈",
+    date: "2025-12",
+    image: "/img/timeline/20251215.webp",
+    ui: {
+      image: "object-[50%_30%]",
+    },
+  },
+  {
+    title: "現在",
+    description: "喜歡咬球",
+    date: "2026-10",
+    image: "/img/timeline/202610.webp",
+    ui: {
+      image: "object-[50%_10%]",
     },
   },
 ];
