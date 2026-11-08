@@ -6,6 +6,7 @@
     <PagesHomeAboutLupa />
     <PagesHomeDemolitionRecord />
     <PagesHomeTimeline />
+    <PagesHomeExperience />
   </div>
 </template>
 
