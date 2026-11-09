@@ -10,6 +10,7 @@
     <PagesHomeContact />
     <PagesHomeFuture />
     <PagesHomeGallery />
+    <PagesHomeSpecifications />
   </div>
 </template>
 
