@@ -15,12 +15,16 @@
     </div>
 
     <div class="experience-list">
-      <div
+      <Motion
         v-for="(
           { title, institution, startDate, endDate, description }, index
         ) in experiences"
         :key="index"
         class="experience-item"
+        :initial="{ opacity: 0, y: 30 }"
+        :while-in-view="{ opacity: 1, y: 0 }"
+        :in-view-options="{ once: true, amount: 0.2 }"
+        :transition="{ duration: 0.5, delay: index * 0.15, ease: 'easeOut' }"
       >
         <div class="left">
           <div class="period-badge">
@@ -38,12 +42,14 @@
         <div class="right">
           <p class="description-text">{{ description }}</p>
         </div>
-      </div>
+      </Motion>
     </div>
   </Container>
 </template>
 
 <script setup lang="ts">
+import { Motion } from "motion-v";
+
 type Experience = {
   title: string;
   institution: string;
@@ -211,7 +217,8 @@ const experiences: Experience[] = [
 
           &.is-current {
             background-color: var(--ui-primary);
-            box-shadow: 0 0 0 3px color-mix(in srgb, var(--ui-primary) 20%, transparent);
+            box-shadow: 0 0 0 3px
+              color-mix(in srgb, var(--ui-primary) 20%, transparent);
           }
         }
       }
@@ -235,7 +242,7 @@ const experiences: Experience[] = [
 
       @media (min-width: 768px) {
         display: flex;
-         flex-direction: column;
+        flex-direction: column;
         align-items: center;
         position: relative;
 
@@ -281,4 +288,3 @@ const experiences: Experience[] = [
   }
 }
 </style>
-
