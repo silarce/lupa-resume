@@ -16,29 +16,29 @@
       :ui="{ item: 'basis-full' }"
       arrows
       dots
-      class="relative z-10 w-150"
+      class="relative z-10 w-110"
       loop
       :prev="{ class: 'cursor-pointer' }"
       :next="{ class: 'cursor-pointer' }"
       @select="(index) => (activeIndex = index)"
     >
       <UCard
-        class="m-2 flex flex-col justify-between h-48 bg-white/20 dark:bg-white/10 backdrop-blur-md border border-white/30 dark:border-white/20 shadow-lg ring-0 rounded-2xl"
+        class="m-2 flex flex-col justify-between h-48 bg-black/45 dark:bg-black/55 backdrop-blur-md border border-white/20 dark:border-white/15 shadow-lg ring-0 rounded-2xl"
       >
         <div>
           <div class="flex items-center justify-between mb-2">
             <span
-              class="font-bold text-lg text-gray-900 dark:text-white drop-shadow-xs"
+              class="font-bold text-lg text-white drop-shadow-xs"
               >{{ item.title }}</span
             >
             <UBadge
               variant="outline"
-              class="bg-black/40 text-white border-white/20 backdrop-blur-md shadow-xs ring-0"
+              class="bg-black/50 text-white border-white/20 backdrop-blur-md shadow-xs ring-0"
             >
               {{ item.tag }}
             </UBadge>
           </div>
-          <p class="text-sm text-gray-800 dark:text-gray-200">
+          <p class="text-sm text-gray-100 dark:text-gray-200">
             {{ item.description }}
           </p>
         </div>
@@ -125,6 +125,7 @@ const projects: Project[] = [
 .background-0 {
   background-image: url("/img/carousel/carousel-01.webp");
   background-position: 50% 50%;
+  /* background-size:100%; */
 }
 
 .background-1 {
