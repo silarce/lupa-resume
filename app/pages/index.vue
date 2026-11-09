@@ -9,6 +9,7 @@
     <PagesHomeTimeline />
     <PagesHomeContact />
     <PagesHomeFuture />
+    <PagesHomeGallery />
   </div>
 </template>
 
