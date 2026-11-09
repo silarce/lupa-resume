@@ -8,6 +8,7 @@
     <PagesHomeStronghold />
     <PagesHomeTimeline />
     <PagesHomeContact />
+    <PagesHomeFuture />
   </div>
 </template>
 
