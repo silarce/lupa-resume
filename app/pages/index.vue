@@ -13,6 +13,7 @@
       <PagesHomeGallery id="section-gallery" />
       <PagesHomeSpecifications id="section-specifications" />
       <PagesHomeStrategicPartners id="section-partners" />
+      <PagesHomeFAQ id="section-faq" />
     </div>
     <PagesHomeSideMenu />
   </div>

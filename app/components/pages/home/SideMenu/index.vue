@@ -60,6 +60,7 @@ const sections: SectionItem[] = [
   { id: "section-gallery", label: "生活照藝廊", icon: "i-lucide-images" },
   { id: "section-specifications", label: "硬體構造剖析", icon: "i-lucide-cpu" },
   { id: "section-partners", label: "戰略合作夥伴", icon: "i-lucide-handshake" },
+  { id: "section-faq", label: "常見問題 FAQ", icon: "i-lucide-circle-help" },
 ];
 
 const isOpen = ref(false);
