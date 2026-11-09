@@ -11,6 +11,7 @@
     <PagesHomeFuture />
     <PagesHomeGallery />
     <PagesHomeSpecifications />
+    <PagesHomeStrategicPartners />
   </div>
 </template>
 
