@@ -1,19 +1,21 @@
 <template>
-  <div class="home-page">
-    <PagesHomeCarousel id="section-carousel" />
-    <PagesHomeAboutLupa id="section-about" />
-    <PagesHomeExperience id="section-experience" />
-    <PagesHomeAchievement id="section-achievement" />
-    <PagesHomeDemolitionRecord id="section-demolition" />
-    <PagesHomeStronghold id="section-stronghold" />
-    <PagesHomeTimeline id="section-timeline" />
-    <PagesHomeContact id="section-contact" />
-    <PagesHomeFuture id="section-future" />
-    <PagesHomeGallery id="section-gallery" />
-    <PagesHomeSpecifications id="section-specifications" />
-    <PagesHomeStrategicPartners id="section-partners" />
+  <div>
+    <div class="home-page">
+      <PagesHomeCarousel id="section-carousel" />
+      <PagesHomeAboutLupa id="section-about" />
+      <PagesHomeExperience id="section-experience" />
+      <PagesHomeAchievement id="section-achievement" />
+      <PagesHomeDemolitionRecord id="section-demolition" />
+      <PagesHomeStronghold id="section-stronghold" />
+      <PagesHomeTimeline id="section-timeline" />
+      <PagesHomeContact id="section-contact" />
+      <PagesHomeFuture id="section-future" />
+      <PagesHomeGallery id="section-gallery" />
+      <PagesHomeSpecifications id="section-specifications" />
+      <PagesHomeStrategicPartners id="section-partners" />
+    </div>
+    <PagesHomeSideMenu />
   </div>
-  <PagesHomeSideMenu />
 </template>
 
 <script setup lang="ts">
