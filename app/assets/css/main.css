@@ -4,3 +4,11 @@
 html {
   scrollbar-gutter: stable;
 }
+
+/* 因為 html 已透過 scrollbar-gutter: stable 預留滾動條寬度，
+   強制取消 UModal (Reka UI) 對 body 額外補償的 margin-right / padding-right，避免雙重補償跳動 */
+body[style] {
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+}
+
