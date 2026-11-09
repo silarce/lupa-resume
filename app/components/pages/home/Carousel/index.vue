@@ -68,28 +68,27 @@ type Project = {
 
 const activeIndex = ref(0);
 
-watchEffect(() => {
-  console.log(activeIndex.value);
-});
-
 const projects: Project[] = [
   {
-    title: "經歷 A",
-    tag: "前端開發",
+    title: "首席拆家與物理重組執行官",
+    tag: "居家結構壓力測試",
     // badgeColor: "primary",
-    description: "使用 Nuxt 4 與 Tailwind CSS 開發高效能網站。",
+    description:
+      "堅守「絕不破壞大型家具」之職業底線，專精於無人監管環境下的書籍墨水吸收、未開封監視器拆解，以及浴廁密室掛鏡完整卸除工程。",
   },
   {
-    title: "經歷 B",
-    tag: "後端開發",
+    title: "里民外交與戰略據點巡邏長",
+    tag: "轄區公關與資源開發",
     // badgeColor: "success",
-    description: "設計 RESTful API 與微服務架構。",
+    description:
+      "每日定時巡視四大核心據點（7-11、全家、遊藝場保全亭、巷口藥局），透過高頻率賣萌與吹冷氣外交，穩定維持高規格點心進貢鏈。",
   },
   {
-    title: "經歷 C",
-    tag: "UI/UX 設計",
+    title: "極限敏捷追逐與野生品鑑師",
+    tag: "敏捷運動與嚴選美食",
     // badgeColor: "neutral",
-    description: "使用 Figma 設計響應式網頁介面。",
+    description:
+      "擅長公園羽球瞬移劫持、天然樹枝咬感鑑定與家貓日常戰術性騷擾；飲食奉行純肉主義，僅接受原肉乾、起司條、鴨脖子與小饅頭。",
   },
 ];
 </script>
