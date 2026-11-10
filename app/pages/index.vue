@@ -2,8 +2,8 @@
   <div>
     <div class="home-page">
       <PagesHomeCarousel id="section-carousel" />
-      <PagesHomeAboutLupa id="section-about" />
       <PagesHomeSpecifications id="section-specifications" />
+      <PagesHomeAboutLupa id="section-about" />
       <PagesHomeExperience id="section-experience" />
       <PagesHomeAchievement id="section-achievement" />
       <PagesHomeDemolitionRecord id="section-demolition" />
