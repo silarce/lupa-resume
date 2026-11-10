@@ -50,17 +50,17 @@ type SectionItem = {
 const sections: SectionItem[] = [
   { id: "section-carousel", label: "焦點輪播", icon: "i-lucide-sparkles" },
   { id: "section-about", label: "關於 Lupa", icon: "i-lucide-dog" },
+  { id: "section-specifications", label: "硬體構造剖析", icon: "i-lucide-cpu" },
   { id: "section-experience", label: "學經歷", icon: "i-lucide-briefcase" },
   { id: "section-achievement", label: "破壞戰績統計", icon: "i-lucide-flame" },
   { id: "section-demolition", label: "拆家紀錄存證", icon: "i-lucide-file-warning" },
   { id: "section-stronghold", label: "四大巡邏據點", icon: "i-lucide-map-pin" },
   { id: "section-timeline", label: "成長時間軸", icon: "i-lucide-history" },
-  { id: "section-contact", label: "聯絡資訊", icon: "i-lucide-mail" },
-  { id: "section-future", label: "未來規劃", icon: "i-lucide-compass" },
   { id: "section-gallery", label: "生活照藝廊", icon: "i-lucide-images" },
-  { id: "section-specifications", label: "硬體構造剖析", icon: "i-lucide-cpu" },
   { id: "section-partners", label: "戰略合作夥伴", icon: "i-lucide-handshake" },
+  { id: "section-future", label: "未來規劃", icon: "i-lucide-compass" },
   { id: "section-faq", label: "常見問題 FAQ", icon: "i-lucide-circle-help" },
+  { id: "section-contact", label: "聯絡資訊", icon: "i-lucide-mail" },
 ];
 
 const isOpen = ref(false);

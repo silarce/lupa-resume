@@ -3,17 +3,17 @@
     <div class="home-page">
       <PagesHomeCarousel id="section-carousel" />
       <PagesHomeAboutLupa id="section-about" />
+      <PagesHomeSpecifications id="section-specifications" />
       <PagesHomeExperience id="section-experience" />
       <PagesHomeAchievement id="section-achievement" />
       <PagesHomeDemolitionRecord id="section-demolition" />
       <PagesHomeStronghold id="section-stronghold" />
       <PagesHomeTimeline id="section-timeline" />
-      <PagesHomeContact id="section-contact" />
-      <PagesHomeFuture id="section-future" />
       <PagesHomeGallery id="section-gallery" />
-      <PagesHomeSpecifications id="section-specifications" />
       <PagesHomeStrategicPartners id="section-partners" />
+      <PagesHomeFuture id="section-future" />
       <PagesHomeFAQ id="section-faq" />
+      <PagesHomeContact id="section-contact" />
     </div>
     <PagesHomeSideMenu />
   </div>
