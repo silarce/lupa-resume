@@ -6,11 +6,12 @@
         Executive Due Diligence &amp; Q&amp;A
       </div>
       <div class="title-row">
-        <h2 class="main-title">常見問題</h2>
+        <h2 class="main-title">FAQ</h2>
         <h3 class="sub-title">Frequently Asked Questions</h3>
       </div>
       <p class="section-desc">
-        針對企業主、人類室友與鄰里民眾最常提出的四大核心疑問，由 Lupa 執行官辦公室統一發布官方澄清與技術說明。
+        針對企業主、人類室友與鄰里民眾最常提出的四大核心疑問，由 Lupa
+        執行官辦公室統一發布官方澄清與技術說明。
       </p>
     </div>
 
@@ -20,6 +21,7 @@
         type="multiple"
         :default-value="['0']"
         class="faq-accordion"
+        :ui="{ header: 'accordion-header' }"
       >
         <template #body="{ item }">
           <div class="answer-content">
@@ -108,7 +110,8 @@ const faqItems: AccordionItem[] = [
       }
 
       .sub-title {
-        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-family:
+          ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
         font-size: 16px;
         font-weight: 500;
         color: var(--ui-text-dimmed);
@@ -138,6 +141,11 @@ const faqItems: AccordionItem[] = [
       color: var(--ui-text-muted);
       padding: 4px 0 16px 28px;
     }
+  }
+}
+:deep(.accordion-header) {
+  > button {
+    cursor: pointer !important;
   }
 }
 </style>
