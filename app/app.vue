@@ -15,6 +15,7 @@
           <ULink to="https://tw.linkedin.com/" target="_blank">
             <UIcon name="i-lucide-linkedin" class="size-5" />
           </ULink>
+          <ThemeSwitcher />
         </template>
       </UHeader>
 

@@ -114,7 +114,7 @@ const faqItems: AccordionItem[] = [
           ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
         font-size: 16px;
         font-weight: 500;
-        color: var(--ui-text-dimmed);
+        color: var(--ui-secondary);
         text-transform: uppercase;
         letter-spacing: 0.05em;
         margin: 0;

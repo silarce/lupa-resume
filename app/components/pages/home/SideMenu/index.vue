@@ -138,7 +138,7 @@ onBeforeUnmount(() => {
         font-size: 11px;
         font-weight: 600;
         letter-spacing: 0.08em;
-        color: var(--ui-primary);
+        color: var(--ui-secondary);
       }
 
       .panel-title {

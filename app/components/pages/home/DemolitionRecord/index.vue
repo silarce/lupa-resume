@@ -176,7 +176,7 @@ const demolitionRecords: DemolitionRecord[] = [
             ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
           font-size: 16px;
           font-weight: 500;
-          color: var(--ui-text-muted);
+          color: var(--ui-secondary);
           margin: 0;
         }
       }

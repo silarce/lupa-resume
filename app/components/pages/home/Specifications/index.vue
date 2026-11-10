@@ -384,7 +384,7 @@ const allSpecs = computed(() => [...leftSpecs, ...rightSpecs]);
           ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
         font-size: 15px;
         font-weight: 500;
-        color: var(--ui-text-dimmed);
+        color: var(--ui-secondary);
         text-transform: uppercase;
         letter-spacing: 0.06em;
         margin: 0;
