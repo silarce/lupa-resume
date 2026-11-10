@@ -1,0 +1,33 @@
+/*
+ * 自訂色階（Tailwind 沒有內建的顏色才需要定義在這裡）
+ * - 名稱 `sakura` / `cornflower` 可直接填進 app/theme/themes.ts 的 colors 使用
+ * - 必須使用 `@theme static`，否則 Tailwind 只會輸出有被 class 用到的變數，Nuxt UI 會讀不到
+ * - 新增色階時請保持 50 ~ 950 共 11 階
+ */
+@theme static {
+  /* 以 CSS 關鍵字 pink (#ffc0cb) 為 300 階延伸 */
+  --color-sakura-50: #fff5f7;
+  --color-sakura-100: #ffe9ee;
+  --color-sakura-200: #ffd5de;
+  --color-sakura-300: #ffc0cb;
+  --color-sakura-400: #ff97ab;
+  --color-sakura-500: #f76d8c;
+  --color-sakura-600: #e14a71;
+  --color-sakura-700: #bd365b;
+  --color-sakura-800: #9c2f4e;
+  --color-sakura-900: #842b46;
+  --color-sakura-950: #4b1223;
+
+  /* 以 CSS 關鍵字 cornflowerblue (#6495ed) 為 400 階延伸 */
+  --color-cornflower-50: #f0f5fe;
+  --color-cornflower-100: #dfe9fc;
+  --color-cornflower-200: #c5d7fa;
+  --color-cornflower-300: #9dbcf5;
+  --color-cornflower-400: #6495ed;
+  --color-cornflower-500: #4d7ce6;
+  --color-cornflower-600: #3860da;
+  --color-cornflower-700: #2f4dc8;
+  --color-cornflower-800: #2d41a2;
+  --color-cornflower-900: #2a3b80;
+  --color-cornflower-950: #1d264e;
+}

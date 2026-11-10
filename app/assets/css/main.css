@@ -1,2 +1,47 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
+@import "./palettes.css";
+
+@theme {
+  --font-sans: "Nunito", "PingFang TC", "Microsoft JhengHei", sans-serif;
+}
+
+/*
+ * 主題 token 對應
+ * --site-* 的實際色值由 app/theme/themes.ts 產生並注入 <head>，這裡只負責對應到 Nuxt UI 的語意變數，
+ * 所以元件內使用 var(--ui-bg)、var(--ui-border)、var(--ui-primary) 等就會自動跟著主題切換
+ */
+:root {
+  --ui-bg: var(--site-bg);
+  --ui-bg-muted: var(--site-surface);
+  --ui-bg-elevated: var(--site-surface);
+  --ui-bg-accented: color-mix(in oklab, var(--site-surface) 75%, var(--ui-color-primary-300));
+  --ui-border: var(--site-border);
+  --ui-border-muted: var(--site-border);
+  --ui-border-accented: color-mix(in oklab, var(--site-border) 70%, var(--ui-color-primary-500));
+}
+
+/* 淺色背景不一定是純白，文字整體加深一階以維持對比 */
+:root:not(.dark) {
+  --ui-text-dimmed: var(--ui-color-neutral-500);
+  --ui-text-muted: var(--ui-color-neutral-600);
+  --ui-text-toned: var(--ui-color-neutral-700);
+  --ui-text: var(--ui-color-neutral-800);
+  --ui-text-highlighted: var(--ui-color-neutral-900);
+}
+
+::selection {
+  background-color: color-mix(in oklab, var(--ui-primary) 35%, transparent);
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+/* 因為 html 已透過 scrollbar-gutter: stable 預留滾動條寬度，
+   強制取消 UModal (Reka UI) 對 body 額外補償的 margin-right / padding-right，避免雙重補償跳動 */
+body[style] {
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+}
+

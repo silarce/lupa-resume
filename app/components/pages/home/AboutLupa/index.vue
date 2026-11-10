@@ -25,7 +25,20 @@
           </div>
         </div>
 
-        <pre class="bio-content">{{ bioText }}</pre>
+        <div ref="bioRef">
+          <pre
+            v-if="!isAnimationDone"
+            class="bio-content"
+            :class="{ 'is-visible': isInView }"
+          ><span
+            v-for="(char, index) in bioChars"
+            :key="index"
+            class="bio-char"
+            :style="{ transitionDelay: `${index * 10}ms` }"
+            @transitionend="onCharTransitionEnd(index)"
+          >{{ char }}</span></pre>
+          <pre v-else class="bio-content">{{ bioText }}</pre>
+        </div>
 
         <!-- <div class="highlight-tags">
           <UBadge color="neutral" variant="subtle"># 飽讀詩書（物理）</UBadge>
@@ -39,6 +52,12 @@
 </template>
 
 <script setup lang="ts">
+import { useInView } from "motion-v";
+
+const bioRef = useTemplateRef<HTMLElement>("bioRef");
+const isInView = useInView(bioRef, { once: true, amount: 0.2 });
+const isAnimationDone = ref(false);
+
 const bioText = `Lupa 是一隻血統純正、氣質出眾的標準哈士奇，天生自帶偶像光環，完全不用刻意裝可愛就已經足夠迷人。
 
 在居家行為準則上，Lupa 堅守「絕不破壞大型家具」的職業底線；然而只要察覺家中無人看管，便會立即啟動自主拆解專案，將各類生活雜物進行高規格的物理性重組。目前已累計啃閱了數本實體書籍，肚子裡實打實地裝了不少墨水，氣質與智商似乎也隨著閱讀量（物理）與日俱增。
@@ -46,6 +65,14 @@ const bioText = `Lupa 是一隻血統純正、氣質出眾的標準哈士奇，�
 戶外休閒方面，熱衷於品鑑各類天然樹枝的咬感，並具備極高的敏捷度，擅長在公園裡神不知鬼不覺地偷走別人的羽毛球。生涯迄今最具代表性的巔峰成就，是某次設法將自己反鎖在浴廁密室中，並憑一己之力把牆上的浴室掛鏡完整拆卸下來。
 
 在飲食標準上極為講究，奉行嚴格的美食主義——面對普通乾飼料一律採取絕食抗議，唯有手撕原肉、香濃起司條與街坊鄰居進貢的特製點心，才能獲得牠的青睞。`;
+
+const bioChars = Array.from(bioText);
+
+const onCharTransitionEnd = (index: number) => {
+  if (index === bioChars.length - 1) {
+    isAnimationDone.value = true;
+  }
+};
 </script>
 
 <style scoped>
@@ -157,7 +184,7 @@ const bioText = `Lupa 是一隻血統純正、氣質出眾的標準哈士奇，�
             font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
             font-size: 16px;
             font-weight: 500;
-            color: var(--ui-text-dimmed);
+            color: var(--ui-secondary);
             text-transform: uppercase;
             letter-spacing: 0.05em;
             margin: 0;
@@ -172,6 +199,17 @@ const bioText = `Lupa 是一隻血統純正、氣質出眾的標準哈士奇，�
         line-height: 1.85;
         color: var(--ui-text-muted);
         margin: 0;
+
+        .bio-char {
+          opacity: 0;
+          transition: opacity 0.25s ease;
+        }
+
+        &.is-visible {
+          .bio-char {
+            opacity: 1;
+          }
+        }
       }
 
       .highlight-tags {
