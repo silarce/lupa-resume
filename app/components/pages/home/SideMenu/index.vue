@@ -49,8 +49,8 @@ type SectionItem = {
 
 const sections: SectionItem[] = [
   { id: "section-carousel", label: "焦點輪播", icon: "i-lucide-sparkles" },
-  { id: "section-about", label: "關於 Lupa", icon: "i-lucide-dog" },
   { id: "section-specifications", label: "硬體構造剖析", icon: "i-lucide-cpu" },
+  { id: "section-about", label: "關於 Lupa", icon: "i-lucide-dog" },
   { id: "section-experience", label: "學經歷", icon: "i-lucide-briefcase" },
   { id: "section-achievement", label: "破壞戰績統計", icon: "i-lucide-flame" },
   { id: "section-demolition", label: "拆家紀錄存證", icon: "i-lucide-file-warning" },
