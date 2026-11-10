@@ -2,12 +2,19 @@
   <div>
     <NuxtRouteAnnouncer />
     <UApp>
-      <UHeader>
+      <UHeader :ui="{ right: 'right' }">
         <template #title> Lupa簡史 </template>
         <UNavigationMenu :items="navItem" />
         <template #right>
-          <UIcon name="i-lucide-facebook" class="size-5" />
-          <UIcon name="i-lucide-instagram" class="size-5" />
+          <ULink to="https://www.facebook.com" target="_blank">
+            <UIcon name="i-lucide-facebook" class="size-5" />
+          </ULink>
+          <ULink to="https://www.instagram.com/" target="_blank">
+            <UIcon name="i-lucide-instagram" class="size-5" />
+          </ULink>
+          <ULink to="https://tw.linkedin.com/" target="_blank">
+            <UIcon name="i-lucide-linkedin" class="size-5" />
+          </ULink>
         </template>
       </UHeader>
 
@@ -22,10 +29,13 @@
           <div class="footer-brand">
             <div class="brand-row">
               <UIcon name="i-lucide-paw-print" class="brand-icon" />
-              <span class="brand-title">Lupa Heavy Industries &amp; Demolition Corp.</span>
+              <span class="brand-title"
+                >Lupa Heavy Industries &amp; Demolition Corp.</span
+              >
             </div>
             <p class="copyright">
-              © 2025–2026 Lupa 首席拆家與巡邏執行官辦公室 · All Treats Reserved.（保留一切肉乾所有權）
+              © 2025–2026 Lupa 首席拆家與巡邏執行官辦公室 · All Treats
+              Reserved.（保留一切肉乾所有權）
             </p>
             <p class="disclaimer">
               免責聲明：本履歷由人類奴才代為維護，任何因瀏覽本站而導致之拖鞋失蹤、書籍缺頁或肉乾短缺，本汪一概不負法律責任。
@@ -54,6 +64,7 @@ const navItem = ref<NavigationMenuItem[]>([
     label: "Github",
     icon: "akar-icons:github-fill",
     to: "https://github.com/silarce/lupa-resume",
+    target: "_blank",
   },
 ]);
 </script>
@@ -130,6 +141,10 @@ const navItem = ref<NavigationMenuItem[]>([
       font-weight: 600;
     }
   }
+}
+
+:deep(.right) {
+  gap: 10px;
 }
 
 @keyframes status-pulse {
